@@ -1,19 +1,35 @@
-/* Blizful Store - America 250 Theme */
+/* Blizful Store - Warm Earthy Theme */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 
 :root {
-    --color-navy: #1a3a6e;
-    --color-navy-light: #2d5a9e;
-    --color-red: #b22234;
-    --color-red-dark: #8b0000;
+    /* Brand Colors from Logo */
+    --color-brown: #7B5544;
+    --color-brown-dark: #5D3F33;
+    --color-sage: #849676;
+    --color-sage-light: #9AAD8C;
+    --color-coral: #D97B6B;
+    --color-coral-dark: #C4685A;
+    --color-golden: #D4A84B;
+    --color-golden-light: #E5C77A;
+
+    /* Neutrals */
     --color-white: #ffffff;
-    --color-cream: #f8f6f3;
-    --color-gold: #c9a227;
-    --color-text: #2c3e50;
-    --color-text-light: #5a6c7d;
-    --color-border: #e1e5e9;
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
+    --color-cream: #FAF8F5;
+    --color-cream-dark: #F0EBE3;
+    --color-text: #5D4E47;
+    --color-text-light: #8B7D76;
+    --color-border: #E5DDD5;
+
+    /* Legacy aliases for compatibility */
+    --color-navy: var(--color-brown);
+    --color-navy-light: var(--color-sage);
+    --color-red: var(--color-coral);
+    --color-red-dark: var(--color-coral-dark);
+    --color-gold: var(--color-golden);
+
+    --shadow-sm: 0 2px 4px rgba(93,62,51,0.08);
+    --shadow-md: 0 4px 12px rgba(93,62,51,0.12);
+    --shadow-lg: 0 8px 24px rgba(93,62,51,0.16);
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -26,10 +42,14 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--color-text);
     line-height: 1.6;
-    background: var(--color-white);
+    background: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .container {
@@ -119,8 +139,17 @@ header {
 .logo {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-navy);
+    color: var(--color-brown);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
 }
 
 .nav-links {
@@ -154,7 +183,7 @@ header {
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-sage) 100%);
     color: var(--color-white);
     padding: 4rem 0;
 }
@@ -306,19 +335,19 @@ header {
 }
 
 .product-tshirt {
-    background: linear-gradient(135deg, #1a3a6e 0%, #2d5a9e 100%);
+    background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-sage-light) 100%);
 }
 
 .product-sweatshirt {
-    background: linear-gradient(135deg, #8b0000 0%, #c41e3a 100%);
+    background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-coral-dark) 100%);
 }
 
 .product-mug {
-    background: linear-gradient(135deg, #1a3a6e 0%, #4169e1 100%);
+    background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-brown-dark) 100%);
 }
 
 .product-hat {
-    background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
+    background: linear-gradient(135deg, var(--color-golden) 0%, var(--color-golden-light) 100%);
 }
 
 .product-badge {
@@ -480,7 +509,7 @@ header {
 /* Newsletter */
 .newsletter {
     padding: 4rem 0;
-    background: linear-gradient(135deg, var(--color-red) 0%, var(--color-red-dark) 100%);
+    background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-brown) 100%);
     color: var(--color-white);
     text-align: center;
 }
