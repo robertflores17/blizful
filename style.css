@@ -297,14 +297,53 @@ header {
 }
 
 .product-image {
-    height: 180px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.product-icon {
-    font-size: 4rem;
+.product-tshirt {
+    background: linear-gradient(135deg, #1a3a6e 0%, #2d5a9e 100%);
+}
+
+.product-sweatshirt {
+    background: linear-gradient(135deg, #8b0000 0%, #c41e3a 100%);
+}
+
+.product-mug {
+    background: linear-gradient(135deg, #1a3a6e 0%, #4169e1 100%);
+}
+
+.product-hat {
+    background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-svg {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-svg {
+    transform: scale(1.1);
 }
 
 .product-card h3 {
@@ -317,6 +356,14 @@ header {
     color: var(--color-text-light);
     font-size: 0.9rem;
     padding: 0 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-hint {
+    display: block;
+    color: var(--color-red);
+    font-weight: 600;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
 }
 
